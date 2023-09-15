@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "80dad590-e068-4fad-8b29-cd93bf927f9a",
+		"name": "PruebasUnitarias_ServiciosInversores",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listadoClientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://w2bov63g48.execute-api.us-east-2.amazonaws.com/test-inversores/cliente",
+					"protocol": "https",
+					"host": [
+						"w2bov63g48",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"test-inversores",
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listadoServicioxCliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://w2bov63g48.execute-api.us-east-2.amazonaws.com/test-inversores/cliente",
+					"protocol": "https",
+					"host": [
+						"w2bov63g48",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"test-inversores",
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionarCliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo\": \"11\",\r\n    \"nombre_completo\": \"Camila\",\r\n    \"clave_acceso\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://w2bov63g48.execute-api.us-east-2.amazonaws.com/test-inversores/cliente",
+					"protocol": "https",
+					"host": [
+						"w2bov63g48",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"test-inversores",
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
