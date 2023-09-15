@@ -1,0 +1,32 @@
+<table class="table text-center">
+    <thead>
+        <tr>
+        <th scope="col">CODIGO</th>
+        <th scope="col">NOMBRE COMPLETO</th>
+        <th scope="col">INGRESOS</th>
+        <th scope="col">CIUDAD</th>
+        <th scope="col">EDAD</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cliente of clientes">
+            <th>{{cliente.codigo}}</th>
+            <td>{{cliente.nombre_completo}}</td>
+            <td>
+                <div *ngIf="cliente.ingresos!==0">
+                    {{cliente.ingresos}}
+                </div>
+            </td>
+            <td>{{cliente.ciudad}}</td>
+            <td>
+                <div *ngIf="cliente.edad!==0">
+                    {{cliente.edad}}
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="card-footer">
+    <button class="btn btn-outline-primary btn-block" routerLink='/'><i
+            class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+</div>

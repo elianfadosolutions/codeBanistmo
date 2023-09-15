@@ -1,0 +1,37 @@
+<p>list-cliente works!</p>
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col">CODIGO</th>
+        <th scope="col">NOMBRE COMPLETO</th>
+        <th scope="col">INGRESOS</th>
+        <th scope="col">CIUDAD</th>
+        <th scope="col">EDAD</th>
+        <th scope="col">ACCIONES</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cliente of clientes">
+            <th>{{cliente.codigo}}</th>
+            <td>{{cliente.nombre_completo}}</td>
+            <td>
+                <div *ngIf="cliente.ingresos!==0">
+                    {{cliente.ingresos}}
+                </div>
+            </td>
+            <td>{{cliente.ciudad}}</td>
+            <td>
+                <div *ngIf="cliente.edad!==0">
+                    {{cliente.edad}}
+                </div>
+            </td>
+            <td>
+                <a [routerLink]="['/detailsCliente']" [queryParams]="cliente"><button type="button" class="btn btn-outline-info btn-sm">Ver</button></a>
+                <a [routerLink]="['/modifComenrcial']" [queryParams]="cliente"><button type="button" class="btn btn-outline-warning btn-sm">Editar</button></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button type="button" class="btn btn-outline-success btn-sm">Nuevo</button>
+<br>
+<a [routerLink]="['/listClienteServicio']" ><button type="button" class="btn btn-outline-secondary btn-sm">ServiciosCliente</button></a>
