@@ -1,0 +1,8 @@
+com\banistmo\financiera\handle\HandlerServicioCliente.class
+com\banistmo\financiera\dto\ClienteServicioDTO.class
+com\banistmo\financiera\requests\RequestServicioCliente.class
+com\banistmo\financiera\services\SelectServicio.class
+com\banistmo\financiera\dto\ServiciosDTO.class
+com\banistmo\financiera\dto\ClienteDTO.class
+com\banistmo\financiera\requests\RequestCliente.class
+com\banistmo\financiera\handle\HandlerCliente.class
