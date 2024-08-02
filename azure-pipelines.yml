@@ -19,4 +19,12 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+    goals: 'clean package'
+  displayName: 'Build with Maven'
+  
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(System,DefaultWorkingDirectory)/ClienteServicioFinanciero-back/target'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+  displayName: 'Publish Artifacts'
