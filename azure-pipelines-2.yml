@@ -1,0 +1,25 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: DownloadBuildArtifacts@0
+  inputs:
+    buildType: 'specific'
+    project: 'PruebaSeguriddBanistmo'
+    pipeline: 'codeBanistmo' # ID del pipeline de CI para el backend
+    buildVersionToDownload: 'latest'
+    downloadType: 'single'
+    artifactName: 'backend-drop'
+    downloadPath: '$(System.DefaultWorkingDirectory)'
+
+- task: AWSLambdaDeploy@1
+  inputs:
+    awsCredentials: 'AWS Azure test'
+    regionName: 'US East (Ohio) [us-east-2]'
+    functionName: 'BanismoService'
+    package: '$(System.DefaultWorkingDirectory)/backend-drop/BanismoApp.jar'
+    handler: 'com.example.YourHandlerClass::handleRequest'
+  displayName: 'Deploy to AWS Lambda'
